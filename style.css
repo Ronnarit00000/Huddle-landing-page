@@ -151,7 +151,7 @@ select {
 }
 
 .icon-link svg {
-    width: 20px;
+    width: 24px;
     height: 16px;
     position: relative;
     top: 2px;
@@ -292,7 +292,7 @@ select {
     /* ------------------------------------------------------------ */
 
     body {
-        background: url('images/bg-desktop.svg') top no-repeat;
+        background: url('images/bg-desktop.svg') left no-repeat;
         background-color: var(--clr-violet);
         background-size: contain;
     }
@@ -353,6 +353,7 @@ select {
 
     .primary-footer {
         justify-content: end;
+        align-self: start;
     }
 }
 
@@ -364,7 +365,7 @@ select {
     /* ------------------------------------------------------------ */
 
     body {
-        background: url('images/bg-desktop.svg') center no-repeat;
+        background: url('images/bg-desktop.svg') left no-repeat;
         background-color: var(--clr-violet);
         background-size: contain;
     }
@@ -379,7 +380,7 @@ select {
         row-gap: 3.5rem;
         justify-content: center;
         grid-template-columns: 2.5rem [content-start] min(100% - 2.5rem * 2, 80rem) [content-end] 2.5rem;
-        grid-template-rows: 5rem 1fr 5rem;
+        grid-template-rows: 6.25rem 1fr 6.25rem;
     }
 
     .base-layout > * {
@@ -394,6 +395,11 @@ select {
         align-self: end;
     }
 
+    .primary-header .logo {
+        width: 12.5rem;
+        height:   2rem;
+    }
+
     /* ------------------------------------------------------------ */
     /*                            content                           */
     /* ------------------------------------------------------------ */
@@ -401,8 +407,8 @@ select {
     .content {
         display: grid;
         gap:3.5rem;
-        align-items: center;
         grid-template-columns: 1fr 1fr;
+        padding-block-start: 2.75rem;
     }
 
     .content-image {
@@ -434,6 +440,7 @@ select {
 
     .primary-footer {
         justify-content: end;
+        align-self: start;
     }
 }
 
@@ -446,5 +453,16 @@ select {
 
     .content {
         grid-template-columns: max-content 1fr;
+    }
+}
+
+@media (min-width : 1480px) {
+
+    /* ------------------------------------------------------------ */
+    /*                            content                           */
+    /* ------------------------------------------------------------ */
+
+    .content {
+        align-self: center;
     }
 }
